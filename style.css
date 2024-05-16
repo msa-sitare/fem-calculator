@@ -1,11 +1,89 @@
-html,
-body,
-div,
-button {
+* {
   margin: 0;
   padding: 0;
   border: 0;
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family: monospace, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+:root {
+  --bg-default: #d8d9db;
+  --bg-hover: #ebebeb;
+  --bg-active: #bbbcbe;
+  --bg-screen: #2c2c2c;
+  --bg-orange: #df974c;
+  --bg-orange-hover: #dfb07e;
+}
+
+.calc {
+  width: 400px;
+  background-color: black;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.container:not(:last-of-type) {
+  margin-bottom: 0.5%;
+}
+
+button {
+  height: 100px;
+  width: 24.5%;
+  font-size: 40px;
+  background-color: var(--bg-default);
+}
+
+.orange {
+  background-color: var(--bg-orange);
+  color: white;
+}
+
+button:hover {
+  background-color: var(--bg-hover);
+}
+
+.orange:hover {
+  background-color: var(--bg-orange-hover);
+}
+
+button:hover, .orange:hover {
+  cursor: pointer;
+}
+
+button:active {
+  background-color: var(--bg-active);
+}
+
+.screen {
+  font-size: 40px;
+  background-color: var(--bg-screen);
+  color: white;
+  text-align: right;
+  padding: 16px 8px;
+}
+
+.clean {
+  width: 49.7%;
+}
+
+.number-zero {
+  width: 74.9%;
 }
