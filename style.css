@@ -27,11 +27,12 @@ body {
   --bg-active: #bbbcbe;
   --bg-screen: #2c2c2c;
   --bg-orange: #df974c;
-  --bg-orange-hover: #dfb07e;
+  --bg-orange-hover: hsl(31, 60%, 68%);
+  --bg-orange-active:#f99b38;
 }
 
 .calc {
-  width: 400px;
+  width: 300px;
   background-color: black;
 }
 
@@ -45,13 +46,13 @@ body {
 }
 
 button {
-  height: 100px;
+  height: 80px;
   width: 24.5%;
-  font-size: 40px;
+  font-size: 32px;
   background-color: var(--bg-default);
 }
 
-.orange {
+.number:last-child {
   background-color: var(--bg-orange);
   color: white;
 }
@@ -60,16 +61,20 @@ button:hover {
   background-color: var(--bg-hover);
 }
 
-.orange:hover {
+.number:last-child:hover {
   background-color: var(--bg-orange-hover);
 }
 
-button:hover, .orange:hover {
+button:hover, .number:last-child:hover {
   cursor: pointer;
 }
 
 button:active {
   background-color: var(--bg-active);
+}
+
+.number:last-child:active {
+  background-color: var(--bg-orange-active);
 }
 
 .screen {
