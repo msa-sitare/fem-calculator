@@ -25,9 +25,9 @@ body {
   --bg-default: #d8d9db;
   --bg-hover: #ebebeb;
   --bg-active: #bbbcbe;
-  --bg-screen: #2c2c2c;
+  --bg-screen: #343434;
   --bg-orange: #df974c;
-  --bg-orange-hover: hsl(31, 60%, 68%);
+  --bg-orange-hover: #deaf7c;
   --bg-orange-active:#f99b38;
 }
 
@@ -52,7 +52,7 @@ button {
   background-color: var(--bg-default);
 }
 
-.number:last-child {
+.numbers:last-child {
   background-color: var(--bg-orange);
   color: white;
 }
@@ -61,11 +61,11 @@ button:hover {
   background-color: var(--bg-hover);
 }
 
-.number:last-child:hover {
+.numbers:last-child:hover {
   background-color: var(--bg-orange-hover);
 }
 
-button:hover, .number:last-child:hover {
+button:hover, .numbers:last-child:hover {
   cursor: pointer;
 }
 
@@ -73,22 +73,33 @@ button:active {
   background-color: var(--bg-active);
 }
 
-.number:last-child:active {
+.numbers:last-child:active {
   background-color: var(--bg-orange-active);
 }
 
-.screen {
+#result {
+  width: 100%;
+  height: 80px;
+  padding: 16px 8px;
   font-size: 40px;
+  background: none;
+  text-align: right;
   background-color: var(--bg-screen);
   color: white;
-  text-align: right;
-  padding: 16px 8px;
+}
+
+#result:focus {
+  outline: none;
+}
+
+#result::placeholder {
+  color: white;
 }
 
 .clean {
   width: 49.7%;
 }
 
-.number-zero {
+.numbers-zero {
   width: 74.9%;
 }
